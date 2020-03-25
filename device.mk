@@ -14,6 +14,7 @@
 
 # Device path
 DEVICE_PATH := device/sony/kagura
+CM_BUILD := kagura
 
 DEVICE_PACKAGE_OVERLAYS += \
     $(DEVICE_PATH)/overlay
@@ -73,8 +74,9 @@ PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/rootdir/system/halium/etc/init/bluetooth-touch-android.conf:system/halium/etc/init/bluetooth-touch-android.conf \
     $(DEVICE_PATH)/rootdir/system/halium/etc/pulse/touch.pa:system/halium/etc/pulse/touch.pa \
     $(DEVICE_PATH)/rootdir/system/halium/usr/share/bluetooth-touch/tone:system/halium/usr/share/bluetooth-touch/tone \
+    $(DEVICE_PATH)/rootdir/system/halium/usr/share/apparmor/hardware/graphics.d/apparmor-easyprof-ubuntu_android:system/halium/usr/share/apparmor/hardware/graphics.d/apparmor-easyprof-ubuntu_android \
     $(DEVICE_PATH)/rootdir/system/halium/usr/share/apparmor/hardware/video.d/apparmor-easyprof-ubuntu_android:system/halium/usr/share/apparmor/hardware/video.d/apparmor-easyprof-ubuntu_android \
-    $(DEVICE_PATH)/rootdir/system/halium/usr/share/h2w/switch:system/halium/usr/share/h2w/switch
+    $(DEVICE_PATH)/rootdir/system/halium/usr/share/upstart/sessions/usensord.conf:system/halium/usr/share/upstart/sessions/usensord.conf
 
 PRODUCT_PACKAGES += \
     libubuntu_application_api \
